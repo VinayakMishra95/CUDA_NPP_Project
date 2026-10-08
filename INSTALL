@@ -1,0 +1,87 @@
+================================================================================
+INSTALLATION & ENVIRONMENT SETUP GUIDE
+CUDA at Scale for the Enterprise - Final Project
+================================================================================
+
+This document provides step-by-step instructions for compiling and executing
+the CUDA & NPP Scalable Image Processing Enterprise Pipeline across different
+platforms and environments.
+
+--------------------------------------------------------------------------------
+1. Coursera Laboratory Environment / Linux with NVIDIA GPU
+--------------------------------------------------------------------------------
+
+The Coursera Lab environment provides pre-configured NVIDIA GPUs (Turing/Ampere)
+and CUDA Toolkit installations under /usr/local/cuda.
+
+Steps:
+1. Open a terminal session in the lab environment.
+2. Clone or extract the project repository:
+     cd ~
+     git clone <YOUR_REPOSITORY_URL> cuda_npp_project
+     cd cuda_npp_project
+
+3. Verify CUDA environment:
+     nvcc --version
+     nvidia-smi
+
+4. Prepare the dataset (downloads/generates USC-SIPI images):
+     python3 scripts/prepare_dataset.py --output_dir data/input --num_small 100
+
+5. Build the GPU-accelerated binary using Make:
+     make all -j4
+
+6. Execute the automated benchmark and verification script:
+     ./run.sh
+
+   Or run individual commands:
+     ./bin/cuda_image_proc --input_dir data/input --output_dir output/large --filter all --benchmark
+
+7. Generated artifacts:
+   Execution logs and packaged submission archives will be created in:
+     - artifacts/execution_log.txt
+     - artifacts/benchmark_report.md
+     - artifacts/execution_artifacts.tar.gz
+
+--------------------------------------------------------------------------------
+2. macOS / Development Machines without NVIDIA GPU
+--------------------------------------------------------------------------------
+
+On machines without an NVIDIA GPU or NVCC (such as Apple Silicon or CPU-only
+workstations), the codebase includes a full algorithmic simulation verification
+backend that validates pipeline mechanics, Netpbm I/O, argument parsing,
+and filtering accuracy.
+
+Steps:
+1. Open Terminal on macOS:
+     cd /path/to/cuda_npp_project
+
+2. Generate the USC-SIPI dataset:
+     python3 scripts/prepare_dataset.py --output_dir data/input --num_small 100
+
+3. Compile using Clang or GCC:
+     make sim HOST_CXX=clang++ -j4
+     # or: make sim HOST_CXX=g++ -j4
+
+4. Run the complete pipeline and verification suite:
+     ./run.sh
+
+5. Inspect generated output images in:
+     output/large/
+     output/batch_small/
+
+--------------------------------------------------------------------------------
+3. Verifying Installation & Outputs
+--------------------------------------------------------------------------------
+
+To verify that the installation succeeded:
+1. Ensure the binary exists:
+     ls -l bin/cuda_image_proc   (on GPU systems)
+     ls -l bin/sim_image_proc    (on simulation hosts)
+
+2. Check that processed PGM images are populated in output/:
+     ls -lh output/large/ | head -n 15
+
+3. Verify packaged artifact:
+     tar -tzvf artifacts/execution_artifacts.tar.gz | head -n 20
+================================================================================

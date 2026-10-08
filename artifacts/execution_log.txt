@@ -1,0 +1,734 @@
+Initializing CUDA / NPP Image Processing Engine...
+Input dataset contains 16 image(s).
+Target output directory: output/large
+NPP Processor initialized in Host CPU Simulation mode.
+[1/16] Processing: sipi_5.1.09_moon256 (256x256)
+[2/16] Processing: sipi_5.1.10_aerial256 (256x256)
+[3/16] Processing: sipi_5.1.11_airplane256 (256x256)
+[4/16] Processing: sipi_5.1.12_clock256 (256x256)
+[5/16] Processing: sipi_5.1.13_resolution256 (256x256)
+[6/16] Processing: sipi_5.1.14_chemical256 (256x256)
+[7/16] Processing: sipi_5.2.01_zoneplate512 (512x512)
+[8/16] Processing: sipi_5.3.01_aerial1024 (1024x1024)
+[9/16] Processing: sipi_5.3.02_airport1024 (1024x1024)
+[10/16] Processing: sipi_boat512 (512x512)
+[11/16] Processing: sipi_grid1024 (1024x1024)
+[12/16] Processing: sipi_stream512 (512x512)
+[13/16] Processing: sipi_testpat1024 (1024x1024)
+[14/16] Processing: sipi_texture1_512 (512x512)
+[15/16] Processing: sipi_texture2_512 (512x512)
+[16/16] Processing: sipi_truck512 (512x512)
+
+========================================================================================================
+                                PERFORMANCE & BENCHMARK SUMMARY TABLE
+========================================================================================================
+Image File                  Resolution  Filter               H2D (ms)   Kernel (ms)   D2H (ms)   Total (ms)Throughput(MB/s)
+--------------------------------------------------------------------------------------------------------
+sipi_5.1.09_moon256         256x256     sim_npp_box_3x3         0.050         0.351      0.050        0.451          138.5
+sipi_5.1.09_moon256         256x256     sim_npp_sobel           0.050         0.042      0.050        0.142          439.0
+sipi_5.1.09_moon256         256x256     sim_npp_threshold_128      0.050         0.002      0.050        0.102          613.0
+sipi_5.1.09_moon256         256x256     sim_custom_laplacian      0.050         0.026      0.050        0.126          495.5
+sipi_5.1.09_moon256         256x256     sim_custom_sharpen      0.050         0.028      0.050        0.128          489.2
+sipi_5.1.10_aerial256       256x256     sim_npp_box_3x3         0.050         0.354      0.050        0.454          137.7
+sipi_5.1.10_aerial256       256x256     sim_npp_sobel           0.050         0.053      0.050        0.153          409.2
+sipi_5.1.10_aerial256       256x256     sim_npp_threshold_128      0.050         0.002      0.050        0.102          613.0
+sipi_5.1.10_aerial256       256x256     sim_custom_laplacian      0.050         0.022      0.050        0.122          511.9
+sipi_5.1.10_aerial256       256x256     sim_custom_sharpen      0.050         0.024      0.050        0.124          503.4
+sipi_5.1.11_airplane256     256x256     sim_npp_box_3x3         0.050         0.352      0.050        0.452          138.4
+sipi_5.1.11_airplane256     256x256     sim_npp_sobel           0.050         0.043      0.050        0.143          437.6
+sipi_5.1.11_airplane256     256x256     sim_npp_threshold_128      0.050         0.002      0.050        0.102          612.0
+sipi_5.1.11_airplane256     256x256     sim_custom_laplacian      0.050         0.023      0.050        0.123          509.5
+sipi_5.1.11_airplane256     256x256     sim_custom_sharpen      0.050         0.024      0.050        0.124          503.7
+sipi_5.1.12_clock256        256x256     sim_npp_box_3x3         0.050         0.351      0.050        0.451          138.5
+sipi_5.1.12_clock256        256x256     sim_npp_sobel           0.050         0.043      0.050        0.143          438.0
+sipi_5.1.12_clock256        256x256     sim_npp_threshold_128      0.050         0.002      0.050        0.102          612.5
+sipi_5.1.12_clock256        256x256     sim_custom_laplacian      0.050         0.023      0.050        0.123          509.5
+sipi_5.1.12_clock256        256x256     sim_custom_sharpen      0.050         0.024      0.050        0.124          503.5
+sipi_5.1.13_resolution256   256x256     sim_npp_box_3x3         0.050         0.352      0.050        0.452          138.4
+sipi_5.1.13_resolution256   256x256     sim_npp_sobel           0.050         0.043      0.050        0.143          437.7
+sipi_5.1.13_resolution256   256x256     sim_npp_threshold_128      0.050         0.002      0.050        0.102          612.5
+sipi_5.1.13_resolution256   256x256     sim_custom_laplacian      0.050         0.023      0.050        0.123          509.5
+sipi_5.1.13_resolution256   256x256     sim_custom_sharpen      0.050         0.024      0.050        0.124          503.5
+sipi_5.1.14_chemical256     256x256     sim_npp_box_3x3         0.050         0.351      0.050        0.451          138.4
+sipi_5.1.14_chemical256     256x256     sim_npp_sobel           0.050         0.043      0.050        0.143          437.6
+sipi_5.1.14_chemical256     256x256     sim_npp_threshold_128      0.050         0.002      0.050        0.102          613.2
+sipi_5.1.14_chemical256     256x256     sim_custom_laplacian      0.050         0.023      0.050        0.123          509.5
+sipi_5.1.14_chemical256     256x256     sim_custom_sharpen      0.050         0.024      0.050        0.124          503.5
+sipi_5.2.01_zoneplate512    512x512     sim_npp_box_3x3         0.050         1.413      0.050        1.513          165.2
+sipi_5.2.01_zoneplate512    512x512     sim_npp_sobel           0.050         0.168      0.050        0.268          932.3
+sipi_5.2.01_zoneplate512    512x512     sim_npp_threshold_128      0.050         0.008      0.050        0.108         2312.1
+sipi_5.2.01_zoneplate512    512x512     sim_custom_laplacian      0.050         0.087      0.050        0.187         1338.4
+sipi_5.2.01_zoneplate512    512x512     sim_custom_sharpen      0.050         0.092      0.050        0.192         1304.9
+sipi_5.3.01_aerial1024      1024x1024   sim_npp_box_3x3         0.050         5.074      0.050        5.174          193.3
+sipi_5.3.01_aerial1024      1024x1024   sim_npp_sobel           0.050         0.680      0.050        0.780         1281.4
+sipi_5.3.01_aerial1024      1024x1024   sim_npp_threshold_128      0.050         0.033      0.050        0.133         7533.0
+sipi_5.3.01_aerial1024      1024x1024   sim_custom_laplacian      0.050         0.348      0.050        0.448         2233.6
+sipi_5.3.01_aerial1024      1024x1024   sim_custom_sharpen      0.050         0.381      0.050        0.481         2079.2
+sipi_5.3.02_airport1024     1024x1024   sim_npp_box_3x3         0.050         5.748      0.050        5.848          171.0
+sipi_5.3.02_airport1024     1024x1024   sim_npp_sobel           0.050         0.679      0.050        0.779         1283.7
+sipi_5.3.02_airport1024     1024x1024   sim_npp_threshold_128      0.050         0.039      0.050        0.139         7194.2
+sipi_5.3.02_airport1024     1024x1024   sim_custom_laplacian      0.050         0.365      0.050        0.465         2152.7
+sipi_5.3.02_airport1024     1024x1024   sim_custom_sharpen      0.050         0.375      0.050        0.475         2104.5
+sipi_boat512                512x512     sim_npp_box_3x3         0.050         1.416      0.050        1.516          164.9
+sipi_boat512                512x512     sim_npp_sobel           0.050         0.171      0.050        0.271          921.2
+sipi_boat512                512x512     sim_npp_threshold_128      0.050         0.008      0.050        0.108         2317.5
+sipi_boat512                512x512     sim_custom_laplacian      0.050         0.090      0.050        0.190         1315.5
+sipi_boat512                512x512     sim_custom_sharpen      0.050         0.095      0.050        0.195         1279.3
+sipi_grid1024               1024x1024   sim_npp_box_3x3         0.050         5.664      0.050        5.764          173.5
+sipi_grid1024               1024x1024   sim_npp_sobel           0.050         0.670      0.050        0.770         1298.8
+sipi_grid1024               1024x1024   sim_npp_threshold_128      0.050         0.033      0.050        0.133         7540.1
+sipi_grid1024               1024x1024   sim_custom_laplacian      0.050         0.343      0.050        0.443         2259.9
+sipi_grid1024               1024x1024   sim_custom_sharpen      0.050         0.366      0.050        0.466         2146.9
+sipi_stream512              512x512     sim_npp_box_3x3         0.050         1.418      0.050        1.518          164.7
+sipi_stream512              512x512     sim_npp_sobel           0.050         0.168      0.050        0.268          933.4
+sipi_stream512              512x512     sim_npp_threshold_128      0.050         0.008      0.050        0.108         2312.1
+sipi_stream512              512x512     sim_custom_laplacian      0.050         0.086      0.050        0.186         1343.5
+sipi_stream512              512x512     sim_custom_sharpen      0.050         0.092      0.050        0.192         1302.9
+sipi_testpat1024            1024x1024   sim_npp_box_3x3         0.050         5.660      0.050        5.760          173.6
+sipi_testpat1024            1024x1024   sim_npp_sobel           0.050         0.671      0.050        0.771         1296.9
+sipi_testpat1024            1024x1024   sim_npp_threshold_128      0.050         0.033      0.050        0.133         7544.8
+sipi_testpat1024            1024x1024   sim_custom_laplacian      0.050         0.344      0.050        0.444         2253.9
+sipi_testpat1024            1024x1024   sim_custom_sharpen      0.050         0.365      0.050        0.465         2148.4
+sipi_texture1_512           512x512     sim_npp_box_3x3         0.050         1.413      0.050        1.514          165.2
+sipi_texture1_512           512x512     sim_npp_sobel           0.050         0.168      0.050        0.268          931.7
+sipi_texture1_512           512x512     sim_npp_threshold_128      0.050         0.008      0.050        0.108         2306.8
+sipi_texture1_512           512x512     sim_custom_laplacian      0.050         0.086      0.050        0.186         1344.1
+sipi_texture1_512           512x512     sim_custom_sharpen      0.050         0.092      0.050        0.192         1299.5
+sipi_texture2_512           512x512     sim_npp_box_3x3         0.050         1.412      0.050        1.512          165.3
+sipi_texture2_512           512x512     sim_npp_sobel           0.050         0.172      0.050        0.272          919.3
+sipi_texture2_512           512x512     sim_npp_threshold_128      0.050         0.008      0.050        0.108         2315.7
+sipi_texture2_512           512x512     sim_custom_laplacian      0.050         0.086      0.050        0.186         1343.5
+sipi_texture2_512           512x512     sim_custom_sharpen      0.050         0.092      0.050        0.192         1299.5
+sipi_truck512               512x512     sim_npp_box_3x3         0.050         1.411      0.050        1.511          165.4
+sipi_truck512               512x512     sim_npp_sobel           0.050         0.167      0.050        0.267          935.5
+sipi_truck512               512x512     sim_npp_threshold_128      0.050         0.008      0.050        0.108         2316.6
+sipi_truck512               512x512     sim_custom_laplacian      0.050         0.086      0.050        0.186         1344.7
+sipi_truck512               512x512     sim_custom_sharpen      0.050         0.096      0.050        0.196         1273.9
+========================================================================================================
+Total Operations:       80
+Total Data Processed:   29.38 MB
+Total Wall-Clock Time:  49.17 ms
+Total Pure Kernel Time: 41.17 ms
+Average Throughput:     597.37 MB/s
+========================================================================================================
+
+All processing completed successfully.
+Initializing CUDA / NPP Image Processing Engine...
+Input dataset contains 100 image(s).
+Target output directory: output/batch_small
+NPP Processor initialized in Host CPU Simulation mode.
+[1/100] Processing: sipi_small_001 (128x128)
+[2/100] Processing: sipi_small_002 (128x128)
+[3/100] Processing: sipi_small_003 (128x128)
+[4/100] Processing: sipi_small_004 (128x128)
+[5/100] Processing: sipi_small_005 (128x128)
+[6/100] Processing: sipi_small_006 (128x128)
+[7/100] Processing: sipi_small_007 (128x128)
+[8/100] Processing: sipi_small_008 (128x128)
+[9/100] Processing: sipi_small_009 (128x128)
+[10/100] Processing: sipi_small_010 (128x128)
+[11/100] Processing: sipi_small_011 (128x128)
+[12/100] Processing: sipi_small_012 (128x128)
+[13/100] Processing: sipi_small_013 (128x128)
+[14/100] Processing: sipi_small_014 (128x128)
+[15/100] Processing: sipi_small_015 (128x128)
+[16/100] Processing: sipi_small_016 (128x128)
+[17/100] Processing: sipi_small_017 (128x128)
+[18/100] Processing: sipi_small_018 (128x128)
+[19/100] Processing: sipi_small_019 (128x128)
+[20/100] Processing: sipi_small_020 (128x128)
+[21/100] Processing: sipi_small_021 (128x128)
+[22/100] Processing: sipi_small_022 (128x128)
+[23/100] Processing: sipi_small_023 (128x128)
+[24/100] Processing: sipi_small_024 (128x128)
+[25/100] Processing: sipi_small_025 (128x128)
+[26/100] Processing: sipi_small_026 (128x128)
+[27/100] Processing: sipi_small_027 (128x128)
+[28/100] Processing: sipi_small_028 (128x128)
+[29/100] Processing: sipi_small_029 (128x128)
+[30/100] Processing: sipi_small_030 (128x128)
+[31/100] Processing: sipi_small_031 (128x128)
+[32/100] Processing: sipi_small_032 (128x128)
+[33/100] Processing: sipi_small_033 (128x128)
+[34/100] Processing: sipi_small_034 (128x128)
+[35/100] Processing: sipi_small_035 (128x128)
+[36/100] Processing: sipi_small_036 (128x128)
+[37/100] Processing: sipi_small_037 (128x128)
+[38/100] Processing: sipi_small_038 (128x128)
+[39/100] Processing: sipi_small_039 (128x128)
+[40/100] Processing: sipi_small_040 (128x128)
+[41/100] Processing: sipi_small_041 (128x128)
+[42/100] Processing: sipi_small_042 (128x128)
+[43/100] Processing: sipi_small_043 (128x128)
+[44/100] Processing: sipi_small_044 (128x128)
+[45/100] Processing: sipi_small_045 (128x128)
+[46/100] Processing: sipi_small_046 (128x128)
+[47/100] Processing: sipi_small_047 (128x128)
+[48/100] Processing: sipi_small_048 (128x128)
+[49/100] Processing: sipi_small_049 (128x128)
+[50/100] Processing: sipi_small_050 (128x128)
+[51/100] Processing: sipi_small_051 (128x128)
+[52/100] Processing: sipi_small_052 (128x128)
+[53/100] Processing: sipi_small_053 (128x128)
+[54/100] Processing: sipi_small_054 (128x128)
+[55/100] Processing: sipi_small_055 (128x128)
+[56/100] Processing: sipi_small_056 (128x128)
+[57/100] Processing: sipi_small_057 (128x128)
+[58/100] Processing: sipi_small_058 (128x128)
+[59/100] Processing: sipi_small_059 (128x128)
+[60/100] Processing: sipi_small_060 (128x128)
+[61/100] Processing: sipi_small_061 (128x128)
+[62/100] Processing: sipi_small_062 (128x128)
+[63/100] Processing: sipi_small_063 (128x128)
+[64/100] Processing: sipi_small_064 (128x128)
+[65/100] Processing: sipi_small_065 (128x128)
+[66/100] Processing: sipi_small_066 (128x128)
+[67/100] Processing: sipi_small_067 (128x128)
+[68/100] Processing: sipi_small_068 (128x128)
+[69/100] Processing: sipi_small_069 (128x128)
+[70/100] Processing: sipi_small_070 (128x128)
+[71/100] Processing: sipi_small_071 (128x128)
+[72/100] Processing: sipi_small_072 (128x128)
+[73/100] Processing: sipi_small_073 (128x128)
+[74/100] Processing: sipi_small_074 (128x128)
+[75/100] Processing: sipi_small_075 (128x128)
+[76/100] Processing: sipi_small_076 (128x128)
+[77/100] Processing: sipi_small_077 (128x128)
+[78/100] Processing: sipi_small_078 (128x128)
+[79/100] Processing: sipi_small_079 (128x128)
+[80/100] Processing: sipi_small_080 (128x128)
+[81/100] Processing: sipi_small_081 (128x128)
+[82/100] Processing: sipi_small_082 (128x128)
+[83/100] Processing: sipi_small_083 (128x128)
+[84/100] Processing: sipi_small_084 (128x128)
+[85/100] Processing: sipi_small_085 (128x128)
+[86/100] Processing: sipi_small_086 (128x128)
+[87/100] Processing: sipi_small_087 (128x128)
+[88/100] Processing: sipi_small_088 (128x128)
+[89/100] Processing: sipi_small_089 (128x128)
+[90/100] Processing: sipi_small_090 (128x128)
+[91/100] Processing: sipi_small_091 (128x128)
+[92/100] Processing: sipi_small_092 (128x128)
+[93/100] Processing: sipi_small_093 (128x128)
+[94/100] Processing: sipi_small_094 (128x128)
+[95/100] Processing: sipi_small_095 (128x128)
+[96/100] Processing: sipi_small_096 (128x128)
+[97/100] Processing: sipi_small_097 (128x128)
+[98/100] Processing: sipi_small_098 (128x128)
+[99/100] Processing: sipi_small_099 (128x128)
+[100/100] Processing: sipi_small_100 (128x128)
+
+========================================================================================================
+                                PERFORMANCE & BENCHMARK SUMMARY TABLE
+========================================================================================================
+Image File                  Resolution  Filter               H2D (ms)   Kernel (ms)   D2H (ms)   Total (ms)Throughput(MB/s)
+--------------------------------------------------------------------------------------------------------
+sipi_small_001              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_001              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.3
+sipi_small_001              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.5
+sipi_small_001              128x128     sim_custom_laplacian      0.050         0.007      0.050        0.107          146.4
+sipi_small_001              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.8
+sipi_small_002              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_002              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.6
+sipi_small_002              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_002              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.3
+sipi_small_002              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.8
+sipi_small_003              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_003              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.5
+sipi_small_003              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_003              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_003              128x128     sim_custom_sharpen      0.050         0.007      0.050        0.107          146.7
+sipi_small_004              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_004              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.6
+sipi_small_004              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.2
+sipi_small_004              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          146.9
+sipi_small_004              128x128     sim_custom_sharpen      0.050         0.007      0.050        0.107          146.3
+sipi_small_005              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_005              128x128     sim_npp_sobel           0.050         0.013      0.050        0.113          138.8
+sipi_small_005              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_005              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.3
+sipi_small_005              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.8
+sipi_small_006              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_006              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.4
+sipi_small_006              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_006              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_006              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.8
+sipi_small_007              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.6
+sipi_small_007              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.6
+sipi_small_007              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.5
+sipi_small_007              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.1
+sipi_small_007              128x128     sim_custom_sharpen      0.050         0.007      0.050        0.107          146.6
+sipi_small_008              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.6
+sipi_small_008              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.6
+sipi_small_008              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_008              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.3
+sipi_small_008              128x128     sim_custom_sharpen      0.050         0.007      0.050        0.107          146.7
+sipi_small_009              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.6
+sipi_small_009              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_009              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_009              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.4
+sipi_small_009              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.0
+sipi_small_010              128x128     sim_npp_box_3x3         0.050         0.104      0.050        0.204           76.7
+sipi_small_010              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_010              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_010              128x128     sim_custom_laplacian      0.050         0.007      0.050        0.107          145.8
+sipi_small_010              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.0
+sipi_small_011              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.6
+sipi_small_011              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_011              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_011              128x128     sim_custom_laplacian      0.050         0.010      0.050        0.110          141.8
+sipi_small_011              128x128     sim_custom_sharpen      0.050         0.010      0.050        0.110          141.9
+sipi_small_012              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_012              128x128     sim_npp_sobel           0.050         0.015      0.050        0.115          135.8
+sipi_small_012              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_012              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.4
+sipi_small_012              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.0
+sipi_small_013              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.6
+sipi_small_013              128x128     sim_npp_sobel           0.050         0.015      0.050        0.115          136.3
+sipi_small_013              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_013              128x128     sim_custom_laplacian      0.050         0.010      0.050        0.110          142.3
+sipi_small_013              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.9
+sipi_small_014              128x128     sim_npp_box_3x3         0.050         0.101      0.050        0.201           77.9
+sipi_small_014              128x128     sim_npp_sobel           0.050         0.015      0.050        0.115          135.6
+sipi_small_014              128x128     sim_npp_threshold_128      0.050         0.000      0.050        0.100          155.5
+sipi_small_014              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_014              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.9
+sipi_small_015              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.6
+sipi_small_015              128x128     sim_npp_sobel           0.050         0.016      0.050        0.116          135.0
+sipi_small_015              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_015              128x128     sim_custom_laplacian      0.050         0.010      0.050        0.110          142.4
+sipi_small_015              128x128     sim_custom_sharpen      0.050         0.010      0.050        0.110          141.9
+sipi_small_016              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.6
+sipi_small_016              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_016              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_016              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_016              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.2
+sipi_small_017              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.6
+sipi_small_017              128x128     sim_npp_sobel           0.050         0.018      0.050        0.118          132.7
+sipi_small_017              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_017              128x128     sim_custom_laplacian      0.050         0.010      0.050        0.110          142.4
+sipi_small_017              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_018              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.6
+sipi_small_018              128x128     sim_npp_sobel           0.050         0.015      0.050        0.115          135.7
+sipi_small_018              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_018              128x128     sim_custom_laplacian      0.050         0.010      0.050        0.110          142.2
+sipi_small_018              128x128     sim_custom_sharpen      0.050         0.010      0.050        0.110          141.9
+sipi_small_019              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.6
+sipi_small_019              128x128     sim_npp_sobel           0.050         0.015      0.050        0.115          136.1
+sipi_small_019              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.2
+sipi_small_019              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_019              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.8
+sipi_small_020              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_020              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_020              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_020              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_020              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_021              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_021              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_021              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_021              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_021              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.9
+sipi_small_022              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_022              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.8
+sipi_small_022              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.2
+sipi_small_022              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_022              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_023              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.6
+sipi_small_023              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_023              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_023              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_023              128x128     sim_custom_sharpen      0.050         0.010      0.050        0.110          141.9
+sipi_small_024              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_024              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_024              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_024              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_024              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_025              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.6
+sipi_small_025              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_025              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_025              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_025              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.3
+sipi_small_026              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.6
+sipi_small_026              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_026              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_026              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_026              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.3
+sipi_small_027              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_027              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_027              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_027              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_027              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.2
+sipi_small_028              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.6
+sipi_small_028              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_028              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.5
+sipi_small_028              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_028              128x128     sim_custom_sharpen      0.050         0.007      0.050        0.108          145.3
+sipi_small_029              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.6
+sipi_small_029              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_029              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.5
+sipi_small_029              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_029              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.2
+sipi_small_030              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_030              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_030              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_030              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_030              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_031              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_031              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.3
+sipi_small_031              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_031              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_031              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.8
+sipi_small_032              128x128     sim_npp_box_3x3         0.050         0.090      0.050        0.190           82.3
+sipi_small_032              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_032              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_032              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.8
+sipi_small_032              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_033              128x128     sim_npp_box_3x3         0.050         0.090      0.050        0.190           82.3
+sipi_small_033              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.1
+sipi_small_033              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_033              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_033              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_034              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_034              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.1
+sipi_small_034              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_034              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_034              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_035              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_035              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_035              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_035              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_035              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_036              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_036              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.9
+sipi_small_036              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_036              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_036              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_037              128x128     sim_npp_box_3x3         0.050         0.073      0.050        0.173           90.4
+sipi_small_037              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.9
+sipi_small_037              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_037              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_037              128x128     sim_custom_sharpen      0.050         0.007      0.050        0.107          145.7
+sipi_small_038              128x128     sim_npp_box_3x3         0.050         0.073      0.050        0.173           90.4
+sipi_small_038              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.9
+sipi_small_038              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.2
+sipi_small_038              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_038              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_039              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_039              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_039              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_039              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_039              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.2
+sipi_small_040              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_040              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.9
+sipi_small_040              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_040              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_040              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.0
+sipi_small_041              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.6
+sipi_small_041              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_041              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_041              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.7
+sipi_small_041              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.8
+sipi_small_042              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_042              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_042              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_042              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_042              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_043              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_043              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_043              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_043              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_043              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_044              128x128     sim_npp_box_3x3         0.050         0.073      0.050        0.173           90.4
+sipi_small_044              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_044              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_044              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_044              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.0
+sipi_small_045              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.6
+sipi_small_045              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_045              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.5
+sipi_small_045              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_045              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.0
+sipi_small_046              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_046              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_046              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_046              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_046              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_047              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_047              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_047              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_047              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_047              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_048              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_048              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_048              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_048              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.4
+sipi_small_048              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.9
+sipi_small_049              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_049              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.1
+sipi_small_049              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_049              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_049              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.9
+sipi_small_050              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_050              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_050              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.2
+sipi_small_050              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_050              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_051              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_051              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_051              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_051              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_051              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_052              128x128     sim_npp_box_3x3         0.050         0.090      0.050        0.190           82.1
+sipi_small_052              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_052              128x128     sim_npp_threshold_128      0.050         0.000      0.050        0.100          155.5
+sipi_small_052              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.8
+sipi_small_052              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.9
+sipi_small_053              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_053              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_053              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_053              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_053              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.3
+sipi_small_054              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_054              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_054              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_054              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_054              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_055              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_055              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.9
+sipi_small_055              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_055              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_055              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.9
+sipi_small_056              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.4
+sipi_small_056              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.9
+sipi_small_056              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.5
+sipi_small_056              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_056              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_057              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.6
+sipi_small_057              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.9
+sipi_small_057              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.5
+sipi_small_057              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.8
+sipi_small_057              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.4
+sipi_small_058              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_058              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_058              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_058              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_058              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_059              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_059              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_059              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_059              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_059              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.2
+sipi_small_060              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_060              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_060              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_060              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_060              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.2
+sipi_small_061              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_061              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.1
+sipi_small_061              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_061              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.4
+sipi_small_061              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_062              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_062              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.1
+sipi_small_062              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_062              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_062              128x128     sim_custom_sharpen      0.050         0.011      0.050        0.111          141.4
+sipi_small_063              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_063              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.1
+sipi_small_063              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_063              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_063              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.9
+sipi_small_064              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.4
+sipi_small_064              128x128     sim_npp_sobel           0.050         0.016      0.050        0.116          135.2
+sipi_small_064              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_064              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_064              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.9
+sipi_small_065              128x128     sim_npp_box_3x3         0.050         0.107      0.050        0.207           75.7
+sipi_small_065              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.9
+sipi_small_065              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_065              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_065              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_066              128x128     sim_npp_box_3x3         0.050         0.090      0.050        0.190           82.3
+sipi_small_066              128x128     sim_npp_sobel           0.050         0.015      0.050        0.115          136.0
+sipi_small_066              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_066              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_066              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.0
+sipi_small_067              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_067              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_067              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_067              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_067              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_068              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_068              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_068              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_068              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_068              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.0
+sipi_small_069              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.6
+sipi_small_069              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_069              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_069              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.3
+sipi_small_069              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.9
+sipi_small_070              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_070              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_070              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_070              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_070              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_071              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.4
+sipi_small_071              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.9
+sipi_small_071              128x128     sim_npp_threshold_128      0.050         0.000      0.050        0.100          155.5
+sipi_small_071              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_071              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_072              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_072              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_072              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_072              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_072              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_073              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_073              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.9
+sipi_small_073              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_073              128x128     sim_custom_laplacian      0.050         0.012      0.050        0.112          139.9
+sipi_small_073              128x128     sim_custom_sharpen      0.050         0.010      0.050        0.110          142.0
+sipi_small_074              128x128     sim_npp_box_3x3         0.050         0.073      0.050        0.173           90.4
+sipi_small_074              128x128     sim_npp_sobel           0.050         0.016      0.050        0.116          135.0
+sipi_small_074              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_074              128x128     sim_custom_laplacian      0.050         0.010      0.050        0.110          142.2
+sipi_small_074              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_075              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.4
+sipi_small_075              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_075              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_075              128x128     sim_custom_laplacian      0.050         0.010      0.050        0.110          142.4
+sipi_small_075              128x128     sim_custom_sharpen      0.050         0.010      0.050        0.110          141.7
+sipi_small_076              128x128     sim_npp_box_3x3         0.050         0.073      0.050        0.173           90.4
+sipi_small_076              128x128     sim_npp_sobel           0.050         0.015      0.050        0.115          136.1
+sipi_small_076              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_076              128x128     sim_custom_laplacian      0.050         0.010      0.050        0.110          142.4
+sipi_small_076              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_077              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.6
+sipi_small_077              128x128     sim_npp_sobel           0.050         0.016      0.050        0.116          135.0
+sipi_small_077              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_077              128x128     sim_custom_laplacian      0.050         0.010      0.050        0.110          142.3
+sipi_small_077              128x128     sim_custom_sharpen      0.050         0.011      0.050        0.111          140.8
+sipi_small_078              128x128     sim_npp_box_3x3         0.050         0.073      0.050        0.173           90.3
+sipi_small_078              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_078              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_078              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.4
+sipi_small_078              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.2
+sipi_small_079              128x128     sim_npp_box_3x3         0.050         0.073      0.050        0.173           90.2
+sipi_small_079              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.9
+sipi_small_079              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_079              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.4
+sipi_small_079              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.0
+sipi_small_080              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_080              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_080              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_080              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_080              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.9
+sipi_small_081              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_081              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_081              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_081              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_081              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.2
+sipi_small_082              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.4
+sipi_small_082              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.8
+sipi_small_082              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_082              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_082              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_083              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.188           83.3
+sipi_small_083              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_083              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_083              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.3
+sipi_small_083              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.9
+sipi_small_084              128x128     sim_npp_box_3x3         0.050         0.090      0.050        0.190           82.3
+sipi_small_084              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.9
+sipi_small_084              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_084              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_084              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_085              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_085              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_085              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_085              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.4
+sipi_small_085              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.0
+sipi_small_086              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.4
+sipi_small_086              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_086              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.2
+sipi_small_086              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.4
+sipi_small_086              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_087              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.4
+sipi_small_087              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_087              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_087              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_087              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.2
+sipi_small_088              128x128     sim_npp_box_3x3         0.050         0.088      0.050        0.188           83.3
+sipi_small_088              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_088              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_088              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_088              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_089              128x128     sim_npp_box_3x3         0.050         0.073      0.050        0.173           90.4
+sipi_small_089              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.9
+sipi_small_089              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_089              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_089              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_090              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_090              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.9
+sipi_small_090              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_090              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_090              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.2
+sipi_small_091              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.4
+sipi_small_091              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_091              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.5
+sipi_small_091              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_091              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_092              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_092              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_092              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_092              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_092              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.2
+sipi_small_093              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.6
+sipi_small_093              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_093              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_093              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_093              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+sipi_small_094              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.5
+sipi_small_094              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_094              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_094              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_094              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.0
+sipi_small_095              128x128     sim_npp_box_3x3         0.050         0.090      0.050        0.190           82.1
+sipi_small_095              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.9
+sipi_small_095              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_095              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.3
+sipi_small_095              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.8
+sipi_small_096              128x128     sim_npp_box_3x3         0.050         0.073      0.050        0.173           90.3
+sipi_small_096              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.8
+sipi_small_096              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_096              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.5
+sipi_small_096              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.8
+sipi_small_097              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.4
+sipi_small_097              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.9
+sipi_small_097              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.3
+sipi_small_097              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.3
+sipi_small_097              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.9
+sipi_small_098              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.4
+sipi_small_098              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          140.9
+sipi_small_098              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.5
+sipi_small_098              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_098              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.2
+sipi_small_099              128x128     sim_npp_box_3x3         0.050         0.073      0.050        0.173           90.4
+sipi_small_099              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_099              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.5
+sipi_small_099              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.3
+sipi_small_099              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          146.9
+sipi_small_100              128x128     sim_npp_box_3x3         0.050         0.087      0.050        0.187           83.4
+sipi_small_100              128x128     sim_npp_sobel           0.050         0.011      0.050        0.111          141.0
+sipi_small_100              128x128     sim_npp_threshold_128      0.050         0.001      0.050        0.101          155.4
+sipi_small_100              128x128     sim_custom_laplacian      0.050         0.006      0.050        0.106          147.6
+sipi_small_100              128x128     sim_custom_sharpen      0.050         0.006      0.050        0.106          147.1
+========================================================================================================
+Total Operations:       500
+Total Data Processed:   7.81 MB
+Total Wall-Clock Time:  61.13 ms
+Total Pure Kernel Time: 11.13 ms
+Average Throughput:     127.79 MB/s
+========================================================================================================
+
+All processing completed successfully.
